@@ -1,2 +1,2 @@
-# C/C++ Programming
+# C Programming
 My C code 
