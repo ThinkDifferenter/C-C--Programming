@@ -1,0 +1,11 @@
+﻿  Match.cpp
+d:\高维向量匹配\vs_project\high_vector\md5_verify\match.cpp(20): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: 参见“fopen”的声明
+d:\高维向量匹配\vs_project\high_vector\md5_verify\match.cpp(82): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+d:\高维向量匹配\vs_project\high_vector\md5_verify\match.cpp(83): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: 参见“fopen”的声明
+d:\高维向量匹配\vs_project\high_vector\md5_verify\match.cpp(88): warning C4101: “T_compress1”: 未引用的局部变量
+d:\高维向量匹配\vs_project\high_vector\md5_verify\match.cpp(89): warning C4101: “T_compress2”: 未引用的局部变量
+  MD5_verify.vcxproj -> D:\高维向量匹配\VS_project\High_Vector\Debug\MD5_verify.exe
+  MD5_verify.vcxproj -> D:\高维向量匹配\VS_project\High_Vector\Debug\MD5_verify.pdb (Full PDB)
