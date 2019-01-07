@@ -1,0 +1,28 @@
+﻿  Reader_verify.cpp
+d:\高维向量匹配\vs_project\high_vector_lsh\high_vector_match\reader_verify.cpp(6): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: 参见“fopen”的声明
+  Reader_base.cpp
+d:\高维向量匹配\vs_project\high_vector_lsh\high_vector_match\reader_base.cpp(6): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: 参见“fopen”的声明
+  O_distance.cpp
+d:\高维向量匹配\vs_project\high_vector_lsh\high_vector_match\o_distance.cpp(10): warning C4244: “+=”: 从“double”转换到“float”，可能丢失数据
+d:\高维向量匹配\vs_project\high_vector_lsh\high_vector_match\o_distance.cpp(12): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+  Match_test.cpp
+d:\高维向量匹配\vs_project\high_vector_lsh\high_vector_match\match_test.cpp(22): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: 参见“fopen”的声明
+d:\高维向量匹配\vs_project\high_vector_lsh\high_vector_match\match_test.cpp(26): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: 参见“fopen”的声明
+d:\高维向量匹配\vs_project\high_vector_lsh\high_vector_match\match_test.cpp(15): warning C4101: “H_2”: 未引用的局部变量
+d:\高维向量匹配\vs_project\high_vector_lsh\high_vector_match\match_test.cpp(14): warning C4101: “H_1”: 未引用的局部变量
+  Match_test2.cpp
+d:\高维向量匹配\vs_project\high_vector_lsh\high_vector_match\match_test2.cpp(18): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: 参见“fopen”的声明
+d:\高维向量匹配\vs_project\high_vector_lsh\high_vector_match\match_test2.cpp(22): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: 参见“fopen”的声明
+  Main.cpp
+  LSH.cpp
+d:\高维向量匹配\vs_project\high_vector_lsh\high_vector_match\lsh.cpp(18): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: 参见“fopen”的声明
+  正在生成代码...
+  High_Vector_match.vcxproj -> D:\高维向量匹配\VS_project\High_Vector_LSH\Debug\High_Vector_match.exe
+  High_Vector_match.vcxproj -> D:\高维向量匹配\VS_project\High_Vector_LSH\Debug\High_Vector_match.pdb (Full PDB)

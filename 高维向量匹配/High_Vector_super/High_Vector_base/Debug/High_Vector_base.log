@@ -1,0 +1,28 @@
+﻿  Process1.cpp
+d:\高维向量匹配\vs_project\high_vector_super\high_vector_base\process1.cpp(14): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: 参见“fopen”的声明
+d:\高维向量匹配\vs_project\high_vector_super\high_vector_base\process1.cpp(27): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+d:\高维向量匹配\vs_project\high_vector_super\high_vector_base\process1.cpp(28): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: 参见“fopen”的声明
+d:\高维向量匹配\vs_project\high_vector_super\high_vector_base\process1.cpp(61): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+d:\高维向量匹配\vs_project\high_vector_super\high_vector_base\process1.cpp(62): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: 参见“fopen”的声明
+  正在生成代码...
+  正在编译...
+  Read_base.cpp
+d:\高维向量匹配\vs_project\high_vector_super\high_vector_base\read_base.cpp(7): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: 参见“fopen”的声明
+d:\高维向量匹配\vs_project\high_vector_super\high_vector_base\read_base.cpp(26): warning C4477: “printf”: 格式字符串“%.0f”需要类型“double”的参数，但可变参数 2 拥有了类型“float *”
+d:\高维向量匹配\vs_project\high_vector_super\high_vector_base\read_base.cpp(26): warning C4477: “printf”: 格式字符串“%f”需要类型“double”的参数，但可变参数 3 拥有了类型“double *”
+  Process2.cpp
+d:\高维向量匹配\vs_project\high_vector_super\high_vector_base\process2.cpp(16): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: 参见“fopen”的声明
+d:\高维向量匹配\vs_project\high_vector_super\high_vector_base\process2.cpp(20): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: 参见“fopen”的声明
+  Norm.cpp
+  Main.cpp
+  正在生成代码...
+  High_Vector_base.vcxproj -> D:\高维向量匹配\VS_project\High_Vector_super\Debug\High_Vector_base.exe
+  High_Vector_base.vcxproj -> D:\高维向量匹配\VS_project\High_Vector_super\Debug\High_Vector_base.pdb (Full PDB)

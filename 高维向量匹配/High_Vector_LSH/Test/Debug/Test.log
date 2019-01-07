@@ -1,0 +1,4 @@
+﻿  Main.cpp
+d:\高维向量匹配\vs_project\high_vector_lsh\test\main.cpp(5): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+  Test.vcxproj -> D:\高维向量匹配\VS_project\High_Vector_LSH\Debug\Test.exe
+  Test.vcxproj -> D:\高维向量匹配\VS_project\High_Vector_LSH\Debug\Test.pdb (Full PDB)
