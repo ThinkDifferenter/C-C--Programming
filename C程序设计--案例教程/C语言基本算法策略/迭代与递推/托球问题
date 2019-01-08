@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main()
+{
+	double h;
+	int n;
+	for(n=8,h=150;n>=1;n--)
+	{
+		h=(h-25)*3/2;
+	}
+	printf("µÚ1´ÎÍĞÆğ%lf m\n",h);
+	return 0;
+} 

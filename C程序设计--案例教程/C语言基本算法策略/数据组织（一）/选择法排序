@@ -1,0 +1,56 @@
+#include<stdio.h>
+#define MAXINT 32767
+#define N 10
+void selectSort(int p[],int q[],int n)
+{
+	int i,j,lower,address;
+	
+	for(i-0;i<n;i++)
+	{
+		q[i]=MAXINT;
+	}
+	for(i=0;i<n;i++)
+	{
+		lower=p[0];
+		address=0;
+		
+		for(j=1;j<n;j++)
+		{
+			if(p[j]<lower)
+			{
+				lower=p[j];
+				address=j;
+			}
+		}
+		q[i]=lower;
+		p[address]=MAXINT;
+	}
+	printf("排序结果:\n");
+	for(i=0;i<n;i++)
+	{
+		printf("%d\t",q[i]);
+	}
+	printf("\n");
+} 
+
+int main()
+{
+	int s[N],d[N];
+	int i;
+	printf("请输入10个数:");
+	for(i=0;i<N;i++)
+	{
+		scanf("%d",&s[i]);
+	}
+	
+	printf("原始序列:\n");
+	for(i=0;i<N;i++)
+	{
+		printf("%d\t",s[i]);
+	}
+	
+	selectSort(s,d,N);
+	
+	
+	return 0;
+}

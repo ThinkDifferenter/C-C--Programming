@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main()
+{
+	int a,b,cnt=1,n;
+	printf("请输入楼梯额阶数:");
+	scanf("%d",&n);
+	
+	for(a=0;a<=n;a++)
+	{
+		for(b=0;2*b<=n;b++)
+		{
+			if(a+2*b==n)
+			{
+				cnt++;
+			}
+		}
+	}
+	printf("一共有%d种上楼梯的方式\n",cnt);
+	return 0;
+}

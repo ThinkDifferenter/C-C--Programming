@@ -1,0 +1,15 @@
+
+#include<stdio.h>
+main()
+{
+	int i,sum=0;
+	int n;
+	printf("Please input n:");
+	scanf("%d",&n);
+	for(i=0;i<=n;i=i+2)//¼ÆÊýÑ­»·£¡i=i+2!! 
+	{
+		sum+=i;
+	}
+	printf("%d\n",sum);
+	return 0;
+}

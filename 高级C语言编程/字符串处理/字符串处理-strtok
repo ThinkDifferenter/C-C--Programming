@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int mian()
+{
+	char s[]="One world One dream";
+	char *delim=" ";
+	char *p;
+	
+	p=strtok(s,delim);
+	while(p)
+	{
+		printf("%s\n",p);
+		p=strtok(NULL,delim);
+	}
+	
+	return 0;
+}

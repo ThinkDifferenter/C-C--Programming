@@ -1,0 +1,43 @@
+#include<stdio.h>
+#include<stdlib.h>
+#define N 5
+struct student
+{
+	char no[9];
+	char name[10];
+	int chinese,math,english;		
+} STU[N];
+
+int main()
+{
+	FILE *fp;
+	int i;
+	
+	if((fp=fopen("text.txt","wt"))==NULL)
+	{
+		printf("cannot open the file!\n");
+		exit(1);
+	}
+	
+	for(i=0;i<=N;i++)
+	{
+		printf("\n学号:");
+		scanf("%s",STU[i].no);
+		
+		printf("姓名:");
+		scanf("%s",STU[i].name);
+		
+		printf("语文:");
+		scanf("%d",STU[i].chinese);
+		
+		printf("数学:");
+		scanf("%d",STU[i].math);
+		
+		printf("英语:");
+		scanf("%d",STU[i].english);
+		
+		fprintf(fp,"%s %s %d %d %d\n",STU[i].no,STU[i].name,STU[i].chinese,STU[i].math,STU[i].english);
+	}
+	fclose(fp);
+	return 0;
+}

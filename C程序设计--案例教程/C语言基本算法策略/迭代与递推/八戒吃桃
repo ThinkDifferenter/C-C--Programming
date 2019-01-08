@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main()
+{
+	int peachs=2;
+	int distance;
+	for(distance=1;distance<=64;distance*=2)
+	{
+		peachs*=2;
+	}
+	printf("八戒吃掉的桃子总数为:%d\n",peachs-2);
+	return 0;
+} 

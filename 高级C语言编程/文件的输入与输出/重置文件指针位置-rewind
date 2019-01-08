@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	FILE *fp;
+	char str[100],str1[100];
+	
+	if((fp=fopen("rewind.txt","wt"))==NULL)
+	{
+		printf("cannot open the file!\n");
+		exit(1);
+	}
+	
+	printf("请输入保存到文件中的字符串:\n");
+	gets(str);
+	fputs(str,fp);
+	
+	fgets(str1,79,fp);
+	printf("写入字符串后，立即读取的字符串为:%s\n",str1);
+	
+	rewind(fp);
+	fgets(str1,79,fp);
+	printf("重置位置指针后，读取的字符串为:%s\n",str1);
+	
+	return 0;
+} 

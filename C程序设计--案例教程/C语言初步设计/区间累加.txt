@@ -1,0 +1,22 @@
+#include<stdio.h>
+
+int sumry (int a,int b)
+{
+	printf("Please input a,b:");
+	scanf("%d %d",&a,&b);
+	int i,sum=0;
+	
+	for(i=a;i<=b;i++)
+	{
+		sum+=i;
+	}	
+	
+	printf("the sum of [a--b] is %d\n",sum);
+}
+
+main()
+{
+	sumry (1,10);
+	
+	return 0;
+}

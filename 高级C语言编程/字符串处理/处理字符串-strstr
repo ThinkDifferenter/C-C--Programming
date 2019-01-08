@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int mian()
+{
+	char *str1="One world One dream!";
+	char str2[100],*p;
+	
+	printf("输入字符串:");
+	scanf("%s",str2);
+	
+	p=strstr(str1,str2);//查找字符串中的子串
+	 
+	if(p)
+	{
+		printf("%s",p);
+	}
+	else
+	{
+		printf("Not found!\n");
+	}
+	return 0;
+} 

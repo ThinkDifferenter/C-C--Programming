@@ -1,0 +1,53 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+#define N 10
+
+void shell (int *a,int n);
+main()
+{
+	int arr[N],i;
+	
+	srand(time(NULL));
+	
+	for(i=0;i<N;i++)
+	{
+		arr[i]=rand()/1000+100;
+	}	
+	printf("排序之前:\n");
+	for(i=0;i<N;i++)
+	{
+		printf("%d\t",arr[i]);
+	}
+	printf("\n");
+	printf("排序之后:\n");
+	
+	shell(arr,N);
+	
+	for(i=0;i<N;i++)
+	{
+		printf("%d\t",arr[i]);
+	}
+	printf("\n");
+	return 0;
+}
+void shell (int *a,int n)
+{
+	int r,i,j,t;
+	
+	for(r=n/2;r>0;r/=2)
+	{
+		for(i=r;i<n;i++)
+		{
+			t=a[i];
+			j=i-r;
+			
+			while(j>=0&&t<a[j])
+			{
+				a[j+r]=a[j];
+				j-=r;
+			}
+			a[j+r]=t;
+		}
+	}
+}

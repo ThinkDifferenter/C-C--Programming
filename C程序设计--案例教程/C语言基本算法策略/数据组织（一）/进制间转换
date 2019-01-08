@@ -1,0 +1,47 @@
+#include<stdio.h>
+
+int numeral[20];
+
+char getFigure(int numeral)
+{
+	char c;
+	if(numeral<=9) 
+	{
+		c='0'+numeral;
+	}
+	else
+	{
+		c='A'+numeral-10;
+	}
+	return c;
+}
+int getNumral(int number,int base)
+{
+	int k=0;
+	do
+	{
+		numeral[k++]=number%base;
+		number=number/base;
+	}while(number>0);
+	return k;
+}
+
+int main()
+{
+	unsigned int num,base,m;
+	
+	printf("输入要转换的十进制数:");
+	scanf("%d",&num);
+	printf("输入目标进制:");
+	scanf("%d",&base);
+	
+	m=getNumral(num,base);
+	
+	printf("转换结果为:");
+	while(m--)
+	{
+		printf("%c",getFigure(numeral[m]));
+	}
+	printf("\n");
+	return 0;
+}

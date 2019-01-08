@@ -1,0 +1,48 @@
+#include<stdio.h>
+int main()
+{
+	int i,j=1,k=1,M,N,m,p[50];
+	
+	printf("请输入人数:");
+	scanf("%d",&M);
+	
+	printf("请输入最大报数数:");
+	scanf("%d",&N);
+	
+	for(i=1;i<=M;i++)
+	{
+		p[i]=i;
+	}	
+	i=1;m=M;
+	do
+	{
+		if(p[i])
+		{
+			if(j++>=N)
+			{
+				p[i]=0;
+				j=1;
+				m--;
+			}
+			else
+			{
+				k=i;
+				if(m<=1)
+				{
+					break;
+				}
+			}
+		}
+		if(i>=M)
+		{
+			i=1;
+		}
+		else
+		{
+			i++;
+		}
+	}while(1);
+	
+	printf("最后剩下的人数为%d号\n",k);
+	return 0;
+}

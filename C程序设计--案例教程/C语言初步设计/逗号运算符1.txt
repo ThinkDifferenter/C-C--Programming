@@ -1,0 +1,15 @@
+#include<stdio.h>
+main()
+{
+	int i=1;
+	int j=2;
+	int k;
+	
+	k=i,j;
+	printf("%d\n",k);
+	k=j,i;
+	printf("%d\n",k);
+	
+	
+	return 0;
+}

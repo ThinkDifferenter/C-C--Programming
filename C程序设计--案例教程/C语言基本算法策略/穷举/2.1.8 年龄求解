@@ -1,0 +1,40 @@
+#include<stdio.h>
+int noSame(int number,int n);
+int getNumberal(int number,int n);
+int main()
+{
+	int age,power3;
+	for(age=10;age<30;age++)
+	{
+		power3=age*age*age;
+		if(power3>=10000||age*power3<100000||age*power3>=1000000)  continue;
+		if (noSame(power3,4)||noSame(power3*age,6))  continue;
+		printf("该人的年龄为:%d\n",age);
+		return 0;
+	}
+	return 0;
+}
+int noSame(int number,int n)
+{
+	
+	int i,j;
+	for(i=0;i<=n;i++)
+	{
+		for(j=0;j<=n;j++)
+		{
+			if(i=j)  continue;
+			if(getNumberal(number,i)==getNumberal(number,j))  return 1;
+		}
+	}
+	return 0;
+}
+int getNumberal(int number,int n)
+{
+	int i;
+	int power=1;
+	for(i=1;i<=n;i++)
+	{
+		power*=10;
+	}
+	return (number%power)/(power/10);
+} 

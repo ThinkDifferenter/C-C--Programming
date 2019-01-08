@@ -1,0 +1,92 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+int ExerNumber=10;
+void Test()
+{
+	int algType=0;
+	int i;
+	int num1=0,num2=0,result=0,answer=0,points=0;
+	
+	printf("现在开始计时，请看题:");
+	
+	srand((unsigned)time(NULL));
+	
+	for(i=1;i<=ExerNumber;i++)
+	{
+		algType=rand()%4+1;
+		switch(algType)
+		{
+			case 1:
+			num1=rand()%100;
+			num2=rand()%100;
+			result=num1+num2;
+			printf("\n%d+%d",num1,num2);
+			break;
+			case 2:
+			num1=rand()%100;
+			num2=rand()%100;
+			if(num1>num2)
+			{
+				printf("\n%d-%d",num1,num2);
+				result=num1-num2;
+			}
+			else
+			{
+				printf("\n%d-%d",num2-num1);
+				result=num2-num1;
+			}
+			break;
+			case 3:
+			num1=rand()%100;
+			num2=rand()%100;			
+			result=num1*num2;
+			printf("\n%d*%d",num1,num2);
+			break;
+			case 4:
+			do
+			{
+				num1=rand()%100;
+				num2=rand()%100;
+			}while(num2==0||num1%num2!=0);
+			result =num1/num2;
+			printf("\n%d/%d",num1,num2);
+			break;
+		} 
+		printf("=?");
+		scanf("%d",&answer);
+		if(answer==result)
+		{
+			++points;
+		}
+		printf("\n你的成绩:");
+		switch(points)
+		{
+			case 10:case 9: printf("优秀\n"); break;
+			case 8: case 7:printf("良好\n"); break;
+			case 6: case 5:printf("不错\n");  break;
+			default:printf("经过努力会好的。\n"); 
+		}
+	}
+}
+int main()
+{
+	char yesOrNo;
+	
+	Test();
+	
+	do
+	{
+		printf("还想要继续吗(y/n):");
+		scanf("%c",&yesOrNo);
+		if(yesOrNo=='n'||yesOrNo=='N')
+		{
+			exit(0);
+		}
+		if(yesOrNo=='y'||yesOrNo=='Y')
+		{
+			Test();
+		}
+	}while(1);
+	return 0;
+}

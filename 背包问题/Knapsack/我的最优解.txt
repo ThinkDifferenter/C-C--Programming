@@ -1,0 +1,5 @@
+knapsack16 Sum_profit:127307  Other_wieght:10
+knapsack17 Sum_profit:128287  Other_wieght:12
+knapsack18 Sum_profit:127233  Other_wieght:7
+knapsack19 Sum_profit:127438  Other_wieght:4
+knapsack20 Sum_profit:127857  Other_wieght:12

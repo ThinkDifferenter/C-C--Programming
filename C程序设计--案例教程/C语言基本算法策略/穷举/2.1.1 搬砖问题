@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main()
+{
+	int men=0,women,children;
+	while(men<=8)
+	{
+		women=0;
+		while(women<=11)
+		{
+			children=36-women-men;
+			if(4*men+3*women+children/2==36)
+			{
+				printf("\nthe men is %d\n",men);
+				printf("the women is %d\n",women);
+				printf("the children is %d\n",children);
+			}
+			women++;
+		}
+		men++;
+	}
+	printf("\n");
+	return 0;
+}

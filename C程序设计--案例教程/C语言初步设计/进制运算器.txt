@@ -1,0 +1,8 @@
+#include<stdio.h>
+main()
+{
+	int i;
+	scanf("%d",&i);
+	printf("i(10):%d<-->i(8):%o<-->i(16):%x\n",i,i,i);
+	return 0;
+}

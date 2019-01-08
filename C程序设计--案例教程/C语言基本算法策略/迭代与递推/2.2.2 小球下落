@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main()
+{
+	int cnt=0;
+	double h=100.0,s=0.0;
+	for(cnt=0;cnt<10;cnt++)
+	{
+		s+=h;
+		h=h/2;
+	}
+	printf("the total length is %.3f m,and rebound:%.3f m height.\n",s,h);
+	return 0;
+} 

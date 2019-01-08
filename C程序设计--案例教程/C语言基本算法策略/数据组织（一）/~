@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<stdarg.h>
+int sum(int n,...);
+int main()
+{
+	int i;
+	i=sum(1,2,3);
+	printf("the sum is %d\n",i);
+	return 0; 
+}
+int sum(int n,...)
+{
+	int v=0,i;
+	va_list vap;//定义一个va_list数据类型的变量vap 作参数列表 
+ 	va_start(vap,n);//对变量vap作初始化，vap指向普通参数n后面的第一个参数 
+ 	//相当于char *vap=(char)&n+sizeof(int)
+	//函数在读取参数的时候是从后往前读取的，参数是以堆栈的形式存在的
+	for(i=0;i<n;i++)
+	{
+		v+=va_arg(vap,int);//通过va_arg访问实际参数
+	}
+ 	va_end(vap);
+ 	return v;  
+}

@@ -1,0 +1,11 @@
+#include<stdio.h>
+#include<string.h>
+main()
+{
+	//计算字符串单位长度！不包括‘0’字符！！ 
+	char Line[]="Hello";
+	printf("strlen=%d\n",strlen(Line));
+	printf("sizeof=%d\n",sizeof(Line));
+	//'H' 'e' 'l' 'l' 'o' '\0'
+	return 0;
+}

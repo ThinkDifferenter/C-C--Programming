@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main()
+{
+	int k=1;
+	double d=500,x=500,v=500;
+	while(d<=1000)
+	{
+		printf("\n倒数第%2d站距下一站的距离为:%10f\t储油量为:%6f",k,x,v);
+		k++;
+		v=500.0*k ;
+		x=500.0/(2*k-1);
+		d+=x;
+	}		
+	d=d-x,k=k-1;
+	x=1000-d;
+	v=500*k-d;
+	printf("\n第一站距下一站的距离为:%10f\t储油量为:%6f",x,v);	
+	printf("\n");
+	return 0;
+} 

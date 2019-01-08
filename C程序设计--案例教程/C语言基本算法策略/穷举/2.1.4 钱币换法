@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main()
+{
+	int a,b,c,cnt=0;
+	for(a=0;5*a<=100;a++)
+	{
+		for(b=0;2*b<=100;b++)
+		{
+			for(c=0;c<=100;c++)
+			{
+				if(5*a+2*b+c==100)
+				{
+					cnt++;
+					printf("a=%d\t",a);
+					printf("b=%d\t",b);
+					printf("c=%d\t",c);
+					printf("\n");
+				}
+				
+			}
+		}
+	}
+	printf("一共有%d种换法\n",cnt);
+	return 0;
+} 

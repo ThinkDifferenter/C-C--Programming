@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<math.h>
+double jifen(doubl a,double b,int n,doube(*p)(double));
+int main()
+{
+	int n=20;
+	double a,b;
+	double(*p)(double);
+	
+	printf("请输入sinx的积分范围a,b:");
+	scanf("%lf %lf",&a,&b);
+	p=sin;
+	printf("sin的积分结果为:%f\n",jifen(a,b,n,p));
+	return 0; 
+}
+
+double jifen(doubl a,double b,int n,doube(*p)(double))
+{
+	int i;
+	double x,h,area;
+	h=(b-a)/n;
+	x=a;
+	area=0;
+	for(i=1;i<=n;i++)
+	{
+		x=x+h;
+		area=area+(*p)(x)*h;
+	}
+	return area;
+} 

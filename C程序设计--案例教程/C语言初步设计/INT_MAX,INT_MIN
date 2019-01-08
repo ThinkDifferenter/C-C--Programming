@@ -1,0 +1,9 @@
+#include<stdio.h>
+#include<limits.h>
+#include<float.h>
+
+int main()
+{
+	printf("INT_MAX=%d\tINT_MIN=%d\n",INT_MAX,INT_MIN);
+	return 0;
+}

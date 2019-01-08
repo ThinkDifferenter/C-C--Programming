@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+#define pi 3.1415923
+int  main()
+{
+	
+
+	double length0,length,a=0.5,error;
+	
+	printf("输入要求的精度:");
+	scanf("%lf",&error);
+	
+	length=(6-0.9/cos(a))/sin(a)+0.9*tan(a)+(7.5-0.9/cos(pi*80/180)-a)/
+	sin(pi*80/180-a)+0.9*tan(pi*80/180-a);
+	
+	do
+	{
+		length0=length;
+		a+=0.000001;
+		length=(6-0.9/cos(a))/sin(a)+0.9*tan(a)+(7.5-0.9/cos(pi*80/180)-a)/
+		sin(pi*80/180-a)+0.9*tan(pi*80/180-a);
+	}while(fabs(length0-length)>=error);
+	
+	printf("圆木最大长度为%lf米。\n",length);
+	return 0;
+} 

@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main()
+{
+	double water=200,salt=50,time=0,timeStep;
+	
+	printf("给定的时间步长:");
+	scanf("%lf",&timeStep);
+	
+	while(time<=180)
+	{
+		water=water+6*timeStep/6lt=salt+2*timeStep/60-salt/water*4*timeStep/60;
+		time+=timeStep;
+	}0-4*timeStep/60;
+		sa
+	
+	printf("30分钟后水池总的食盐含量为%f公斤。\n",salt);
+	return 0;
+}

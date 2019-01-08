@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+int main()
+{
+	int i,j=0,cnt=0;
+	
+	srand((unsigned)time(NULL));
+	i=rand()%100+1;
+	
+	printf("电脑已经想好了一个数，你猜吧！\n");
+	
+	while(j!=i)
+	{
+		printf("我猜这个数是:");
+		scanf("%d",&j);
+		if(j>i)
+		{
+			printf("你猜的数大了，请重猜！\n");
+		} 
+		else if(i<j)
+		{
+			printf("你猜的数小了，请重猜！\n");
+		} 
+		cnt++;	
+	} 
+	printf("我用%d次猜到了电脑想的数是:%d\n",cnt,j);
+	return 0;
+}

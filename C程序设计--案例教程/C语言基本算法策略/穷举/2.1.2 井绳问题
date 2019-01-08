@@ -1,0 +1,38 @@
+#include<stdio.h>
+int main()
+{
+	int a,b,c,d,e;
+	int l;
+	
+	printf("请输入井的深度:");
+	scanf("%d",l);
+	for(a=1;2*a<=l;a++)
+	{
+		for(b=1;3*b<=l;b++)
+		{
+			if(2*a+b==l)
+			{
+				for(c=1;4*c<=l;c++)
+				{
+					
+					if(4*c+d==l)
+					{
+						for(e=1;6*e<=l;e++)
+						{
+							if(5*d+e==l&&6*e+a==l)
+							{
+								printf("甲绳长:%d寸\n",a);
+								printf("乙绳长:%d寸\n",b);
+								printf("丙绳长:%d寸\n",c);
+								printf("丁绳长:%d寸\n",d);
+								printf("戊绳长:%d寸\n",e);
+								printf("井深:%d寸\n",l); 
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	return 0;
+} 

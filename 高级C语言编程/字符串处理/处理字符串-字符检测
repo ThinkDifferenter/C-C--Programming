@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<ctype.h>//类型判断 
+#include<stdlib.h>
+int main()
+{
+	char ch;
+	int t=0;
+	printf("输入任意字符:");
+	do
+	{
+		ch=getchar();
+		if(isalnum(ch))//数字判断 
+		{
+			t++;
+		}
+		printf("字母和数字的个数共为:%d",t);
+		
+	}while(ch!='\n');
+	
+	return 0;
+}

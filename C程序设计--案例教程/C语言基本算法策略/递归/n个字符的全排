@@ -1,0 +1,42 @@
+#include<stdio.h>
+#define N 4
+char a[N];
+int cnt=0;
+int  permut(int k);
+int main()
+{
+	printf("enter characters (up to %d)",N);
+	scanf("%s",a);
+	permut(0);
+	printf("\n");
+	return 0;
+}
+int permut(int k)
+{
+	int i,tmp;
+	int fact=1;
+	for(i=0;i<N;i++)
+	{
+		fact*=1;
+	}
+	if(k==N)
+	{
+		if(cnt%fact==0)    printf("\n");
+		for(i=0;i<N;i++) 
+		{
+			printf("%c",a[i]);
+		}
+		printf("\t");
+		cnt++;
+	}
+	else
+	{
+		for(i=k;i<N;i++)
+		{
+			tmp=a[k],a[k]=a[i],a[i]=tmp;
+			permut(k+1);
+			tmp=a[k],a[k]=a[i],a[i]=tmp;
+		}
+	}
+	return 0;
+}

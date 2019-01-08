@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+int main()
+{
+	int n=500,i=1,m=0;
+	double r,x,y,z;
+	
+	printf("输入球的半径:");
+	scanf("%lf",&r);
+	printf("输入要模拟的点数:");
+	scanf("%d",&n);
+	
+	srand(time(00));
+	while(i++<=n)
+	{
+		x=(double)rand()/RAND_MAX;
+		y=(double)rand()/RAND_MAX;
+		z=(double)rand()/RAND_MAX;	
+		if(x*x+y*y+z*z<=1)
+		{
+			m++;
+		}
+	}
+	printf("球的体积为%lf\n",8*r*r*r*m/n);
+	return 0;
+} 

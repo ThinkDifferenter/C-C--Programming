@@ -1,0 +1,43 @@
+#include<stdio.h>
+#include<stdlib.h>
+#define N 9
+char a[]={1,2,3,4,5,6,7,8,9},sr[N];
+int perm(int i,int r,int top);
+int main()
+{
+	int r;
+	
+	printf("输入选择的元素的个数(最多%d个):",N);
+	scanf("%d",&r);
+	
+	if(r>N)
+	{
+		printf("输入错误！");
+		exit(1);
+	}
+	
+	
+	printf("所求的全体组合为:\n");
+	perm(0,r,0);
+	printf("\n");
+	return 0;
+}  
+int perm(int i,int r,int top)
+{
+	int j;
+	if(r==0)
+	{
+		for(i=0;i<top;i++)
+		{
+			printf("%d",sr[i]);
+		}
+		printf("\t");
+	}
+	else if(i+r-1<N)
+	{
+		sr[top]=a[i];
+		perm(i+1,r-1,top+1);
+		perm(i+1,r,top);
+	}
+	return 0;
+}

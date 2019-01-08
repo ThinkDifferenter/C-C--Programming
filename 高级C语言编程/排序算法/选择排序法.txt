@@ -1,0 +1,54 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+#define N 10
+
+void xuanze (int *a,int n);
+main()
+{
+	int arr[N],i;
+	
+	srand(time(NULL));
+	
+	for(i=0;i<N;i++)
+	{
+		arr[i]=rand()/1000+100;
+	}	
+	printf("排序之前:\n");
+	for(i=0;i<N;i++)
+	{
+		printf("%d\t",arr[i]);
+	}
+	printf("\n");
+	printf("排序之后:\n");
+	
+	xuanze(arr,N);
+	
+	for(i=0;i<N;i++)
+	{
+		printf("%d\t",arr[i]);
+	}
+	printf("\n");
+	return 0;
+}
+void xuanze (int *a,int n)
+{
+	int i,j,k,t;
+	for(i=0;i<n-1;i++)
+	{
+		k=i;
+		for(j=i+1;j<n;j++)
+		{
+			if(a[j]<a[k])
+			{
+				k=j;
+			}
+		}
+		if(k!=i)
+		{
+			t=a[i];
+			a[i]=a[k];
+			a[k]=t;
+		}
+	}
+}

@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<string.h>
+//计算字符串的长度（没有包括‘0’字符！！） 
+int mylen(const char* s)
+{
+	int idx=0;
+	while(s[idx]!='\0')
+	{
+		idx++;
+	}
+	return idx;
+
+}
+main()
+{
+	char Line[]="Hello";
+	printf("strlen=%d\n",mylen(Line));
+	printf("syzeof=%d\n",sizeof(Line));
+	return 0;
+}

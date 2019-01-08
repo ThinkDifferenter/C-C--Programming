@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+main()
+{
+	char string[80];
+	FILE *fp;
+	
+	if((fp=fopen("text.txt","rt"))==NULL)
+	{
+		printf("cannot open the file !\n");
+		exit(1);
+	}
+	
+	printf("wen jian de ren rong :");
+	while(fgets(string,80,fp))
+	{
+		printf("%s",string);
+	}
+	printf("\n");
+	fclose(fp);
+	return 0;
+}

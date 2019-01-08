@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int mian()
+{
+	char *str,ch;
+	int i,j;
+	
+	printf("重复的字符:");
+	scanf("%c",&ch);
+	
+	printf("输入重复的字符数量:");
+	scanf("%d",&i);
+	
+	if(i<=0)
+	{
+		exit(1);
+	}	
+	str=(char *)malloc(sizeof(char)*i+1);
+	if(!str)
+	{
+		printf("分配动态内存失败!");
+		exit(1);
+	}
+	for(j=0;j<i;j++)
+	{
+		str[j]=' ';
+	} 
+	str[i]='\0';
+	strset(str,ch);
+	printf("重复字符串；%s\n",str);
+	return 0;
+} 

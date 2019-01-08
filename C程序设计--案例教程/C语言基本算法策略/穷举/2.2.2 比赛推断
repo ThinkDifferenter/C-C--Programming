@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+	//a,b,c for A,B,C  1,2,3 for x,y,z
+	int a,b,c;
+	for(a=1;a<=3;a++)
+	{
+		if(a==1)  continue;
+		for(c=1;c<=3;c++)
+		{
+			if(c==1||c==3)  continue;
+			if(c==a)  continue;
+			b=(1+2+3)-a-c;
+			printf("A:%d,B:%d,C:%d\n",a,b,c); 
+		}
+	}
+} 

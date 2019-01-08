@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+	int cow0=1,cow1=2,cow2=3,cow3=4,cown,year;
+	for(year=4;year<=20;year++)
+	{
+		cown=cow3+cow1;
+		cow1=cow2;
+		cow2=cow3;
+		cow3=cown;
+	}
+	printf("20年后有%d头牛。\n",cown);
+	return 0;
+}

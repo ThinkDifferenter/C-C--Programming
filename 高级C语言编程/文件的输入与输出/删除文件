@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main(int argc,char *argv[])
+{
+	int i;
+	char ans;
+	if(1>=argc) 
+	{
+		printf("使用格式错误！\n");
+		exit(1);
+	}	
+	
+	for(i=1;i<argc;i++)
+	{
+		printf("真的删除文件%s(Y/N)",argv[i]);
+		fflush(stdin);
+		scanf("%c",&ans);
+		if(ans=='Y'||'y')
+		{
+			if(remove(argv[i])!=0)
+			{
+				printf("删除文件%s失败!\n",argv[i]);
+			}
+		}
+	}
+	return 0;
+} 

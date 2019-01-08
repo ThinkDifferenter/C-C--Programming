@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	double x0,x,t,s=1,tmp=1;
+	int n=1;
+	
+	printf("enter x for e^x:");
+	scanf("%lf",&x0);
+	
+	t=x0;
+	x=x0;
+	while(fabs(t)>=1e-5)
+	{
+		s+=t;
+		x=x*x0;
+		tmp*=(n+1);
+		t=x/tmp;
+		n+=1;
+	}	
+	printf("e^%.2f=%.2f\n",x0,s);
+	return 0;
+} 

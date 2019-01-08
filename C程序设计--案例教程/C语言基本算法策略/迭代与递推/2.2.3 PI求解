@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<math.h>
+
+int  main()
+{
+	double item=1.0,pi=0.0,s=1.0,n=1.0;
+	
+	for(n=1;fabs(item)>1e-5;n++)
+	{
+		pi+=item;
+		n+=2;
+		s=-s;
+		item=s/n;
+	}
+	
+	printf("the pi is %lf\n",4*pi);
+	return 0;
+} 

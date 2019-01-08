@@ -1,0 +1,12 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+//随机数产生套路！ 
+main()
+{
+	int i;
+	srand((unsigned)time(NULL));
+	i=rand()%90+21;
+	printf("%d\n",i);
+	return 0;
+}

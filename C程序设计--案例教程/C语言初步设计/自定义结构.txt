@@ -1,0 +1,20 @@
+#include<stdio.h>
+//结构声明！ 
+struct date
+{
+	int day;
+	int month;
+	int year;
+};
+main()
+{
+	//结构的初始化！ 
+	struct date myday={24,12,2015};//today：结构变量！ 
+	struct date today;
+	today.day=23;//"."取结构成员运算!
+	today.month=12;
+	today.year=2015;
+	printf("%d-%d-%d\n",myday.day,myday.month,myday.year);
+	printf("%d-%d-%d\n",today.day,today.month,today.year);
+	return 0;
+}

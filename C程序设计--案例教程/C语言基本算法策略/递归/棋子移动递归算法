@@ -1,0 +1,80 @@
+#include<stdio.h>
+#define Max 100
+
+char piece[Max];
+int stp=0,pieceNum;
+
+int disp();
+int init(int n);
+int move(int s,int n);
+int play4();
+void 
+play();
+int main()
+{
+	printf("输入一种棋子数:");
+	scanf("%d",&pieceNum);
+	
+	init(pieceNum);
+	printf("移动过程如下:");
+	play(pieceNum);		
+	printf("\n");
+	return 0;
+}
+int disp()
+{
+	int n;
+	n=pieceNum;
+	for(int i=0;i<=2*n+2;i++)
+	{
+		printf("%c",piece[i]);	
+	}
+	printf("\n");
+	return 0;
+}
+int init(int n)
+{
+	int i;
+	for(i=0;i<=2*n;i++)
+	{
+		piece[i]='*';	
+	}
+	for(i=n+1;i<=2*n;i++)
+	{
+		piece[i]='o';
+	}
+	piece[2*n+1]='-';
+	piece[2*n+2]='-';
+	
+	printf("初始状态:");
+	disp(); 
+	return 0;
+}
+int move(int s,int t)
+{
+	piece[t]=piece[s];
+	piece[t+1]=piece[s+1];
+	piece[s]=piece[s+1]='-';
+	printf("step%d:",++stp);
+	disp();
+	return 0;
+}
+
+int play4()
+{
+	move(4,9);
+	move(8,4);
+	move(2,8);
+	move(7,2);
+	move(1,7);
+}
+void play(int n)
+{
+	if(n<=4) play4();
+	else
+	{
+		move(n,2*n+1);
+		move(2*n-1,n);
+		play(n-1);
+	}	
+}

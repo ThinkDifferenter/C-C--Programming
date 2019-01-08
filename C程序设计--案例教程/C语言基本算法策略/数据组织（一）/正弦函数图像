@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<math.h>
+
+int main()
+{
+	char p[80]="                                          ";
+	int ts;
+	double rd,n;
+	printf("     -1                0                  1\n");
+	printf("     |-----------------|------------------|\n");	
+	
+	p[20]='|';
+	rd=3.1415926/180;//
+	for(n=0;n<=360;n+=10)
+	{
+		ts=(int)(20+15*sin(n*rd));//¼ÆËãÏÔÊ¾Î»ÖÃ 
+		p[ts]='*';
+		printf("%5.0f%s\n",n,p);
+		p[ts]=' ';
+	}
+} 

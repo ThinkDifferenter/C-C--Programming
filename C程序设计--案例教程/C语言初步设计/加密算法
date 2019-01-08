@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+int main()
+{
+	int key;
+	char ch;
+	printf("请输入密匙:");
+	scanf("%d",&key);
+	printf("\n输入明文，将得到对应密文如下:");
+	while((ch=getch())!='\n')
+	{
+		(ch+key)>123?putchar(ch-123+33+key):((ch+key)<33?putchar(ch+123+key):putchar(ch+key));
+	}	
+	return 0;
+}

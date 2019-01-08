@@ -1,0 +1,63 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+#define N 5
+//折半查找 
+int isearch(int a[],int n,int x);
+
+int main()
+{
+	int a[N],x,n,i;
+	srand(time(NULL));
+	
+	for(i=0;i<N;i++)
+	{
+		a[i]=rand()/1000+100;
+	}
+	printf("输入要查找的数:");
+	scanf("%d",&x);
+	
+	n=isearch(a,N,x);
+	
+	printf("\n数据序列:\n");
+	for(i=0;i<N;i++)
+	{
+		printf("%4d",a[i]);
+	}
+	printf("\n\n");
+	
+	if(n<0)
+	{
+		printf("没有找到数据:%d\n",x);
+	}
+	else
+	{
+		printf("数据%d位于数组的第%d个元素初.\n",x,n+1);
+	}
+	printf("\n");
+	return 0;
+	
+}
+int isearch(int a[],int n,int x)
+{
+	int mid ,low,high;
+	low=0;
+	high=n=1;
+	while(low<=high)
+	{
+		mid=(low+high)/2;
+		if(a[mid]==x)
+		{
+			return mid;
+		}
+		else if(a[mid]>x)
+		{
+			high=mid-1;
+		}
+		else
+		{
+			low=mid+1;
+		}
+	}
+	return -1;
+}

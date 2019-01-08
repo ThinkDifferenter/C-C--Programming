@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<string.h>
+#include<string.h> 
+int main()
+{
+	char str1[100],str2[100];
+	int i;
+	
+	printf("输入一个字符串:");
+	gets(str1);
+	
+	printf("\n输入要复制的字符数量:");
+	scanf("%d",&i);
+	
+	strncpy(str2,str1,i);//复制部分字符串 
+	
+	printf("复制的字符串:%s\n",str2);
+	return 0;	
+} 

@@ -1,0 +1,46 @@
+void  ReadInfor()
+{
+	FILE *fp;
+	int j;
+	float Val = 0;
+	char FileName[1024] = "";
+
+
+	sprintf(FileName, "knapsack40.txt");
+	if ((fp=fopen(FileName,"r"))==NULL)
+	{   
+		//读取文件失败
+		printf("The file is not found");
+		return;
+	}
+
+	//读入物品个数
+	fscanf(fp,"%f",&Val);
+	int m_Dim = Val;
+	double* m_Weight = new double[m_Dim];
+	double* m_Profit = new double[m_Dim];
+
+	//读入口袋容积
+	fscanf(fp,"%f",&Val);
+	double m_Contain = Val;
+
+	printf("\n\n:---P:");
+	//读入每个物品的价值
+	for (j=0; j<m_Dim; j++)
+	{
+		fscanf(fp,"%f",&Val);
+		m_Profit[j] = Val;
+		printf("%f, ", Val);
+	}
+
+	printf("\n\n:---W:");
+	//读入每个物品的体积
+	for (j=0; j<m_Dim; j++)
+	{
+		fscanf(fp,"%f",&Val);
+		m_Weight[j] = Val;
+		printf("%f, ", Val);
+	} 
+
+	fclose(fp);
+}

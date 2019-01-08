@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<stdlib.h>
+#define BUFSIZE 1024
+int main(int argc,char *argv[])
+{
+	int i,bytes;
+	FILE *fp,*fp2;
+	char buf[BUFSIZE];	 
+	if(2>=argc) 
+	{
+		printf("使用格式错误！\n");
+		exit(1);
+	}	
+	
+	if((fp=fopen(argv[argc-1],"wb"))==NULL)
+	{
+		printf("创建文件%s失败!\n",argv[argc-1]);
+		exit(1);
+	}
+	
+	for(i=1;i<argc-1;i++)
+	{
+		if((fp=fopen(argv[i],"rb"))==NULL)
+		{
+			printf("打开文件%d失败!\n",argv[i]);
+			exit(1);
+		}
+		while((bytes=fread(buf,sizeof(char),BUFSIZE,fp2))>0)
+		{
+			fwrite(buf,sizeof(char),bytes,fp);
+		}
+		fclose(fp2);
+	}
+	return 0;
+} 

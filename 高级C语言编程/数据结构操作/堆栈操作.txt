@@ -1,0 +1,62 @@
+#include<stdio.h>
+#include<stdlib.h>
+#define Max_Stack 100
+typedef struct
+{
+	char *date;
+	int st;
+} Stack;
+Stack *createstack()
+{
+	Stack *s;
+	s=(Stack *)malloc(sizeof(Stack));
+	if(!s)
+	{
+		return 0;
+	}
+	s->date=(char *)malloc(Max_Stack*sizeof(int));
+	if(!s->date)
+	{
+		free(s);
+		return 0;
+	}
+	s->st=0;
+	return s;
+} 
+int push(Stack *s,int e)
+{
+	if(!s)  return 0;
+	if(!s->date) return 0;
+	if(s->st>Max_Stack)  return 0;
+	s->date[s->st++]=e;
+	return 1;
+} 
+int  pop(Stack *s)
+{
+	if(!s)  return 0;
+	if(!s->date) return 0;
+	if(s->st<0)  return 0;
+	
+	return  s->date[--s->st];	
+}
+int main()
+{
+	int i,n;
+	Stack *s=createstack();
+	
+	for(i=0;i<10;i++)
+	{
+		printf("输入进栈的数据:");
+		scanf("%d",&n);
+		push(s,n);
+	}
+	printf("出栈的顺序:");
+	for(i=0;i<10;i++)
+	{
+		printf("%d",pop(s));
+		
+	}
+	printf("\n\n");
+	
+	return 0;
+}

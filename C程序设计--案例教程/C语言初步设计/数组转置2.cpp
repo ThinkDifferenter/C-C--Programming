@@ -1,0 +1,43 @@
+#include<stdio.h>
+main()
+{
+	int a[5][5];
+	int i,j,k;
+	//input
+	for(i=0;i<5;i++)
+	{
+		for(j=0;j<5;j++)
+		{
+			scanf("%d",&a[i][j]);
+		}
+	}
+	//array
+	for(i=0;i<5;i++)
+	{
+		for(j=0;j<5;j++)
+		{
+			printf("%5d",a[i][j]);
+		}
+		printf("\n");
+	}
+	
+	for(i=0;i<5;i++)
+	{
+		for(j=i+1;j<5;j++)
+		{
+			k=a[i][j];
+			a[i][j]=a[j][i];
+			a[j][i]=k;
+		}
+	}
+	printf("\n");
+	//array
+	for(i=0;i<5;i++)
+	{
+		for(j=0;j<5;j++)
+		{
+			printf("%5d",a[i][j]);
+		}
+		printf("\n");
+	}
+}

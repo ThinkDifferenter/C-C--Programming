@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main()
+{
+	double x=0;
+	int year;
+	for(year=5;year>=1;year--)
+	{
+		x=(x+200)/(1+12*0.32e-2);
+	}
+	printf("最初存入金额为:%lf元",x);
+	printf("\n");
+	return 0;
+} 

@@ -1,0 +1,13 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int main()
+{
+	char str[100];
+	
+	printf("输入一个字符串:");
+	scanf("%s",str);
+	
+	printf("输入字符串的长度为:%d\n",strlen(str));
+	return 0;
+} 

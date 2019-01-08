@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<ctype.h>
+//大小写转换 
+int main()
+{
+	char ch;
+	do
+	{
+		printf("a,添加数据\n");
+		printf("b,删除数据\n");
+		printf("c,查看数据\n");
+		printf("d,退出系统\n");
+		ch=getchar();
+		
+		switch(toupper(ch))
+		{
+			case 'A': printf("调用添加数据的函数!\n");  break;
+			case 'B': printf("调用删除数据的函数!\n");  break;
+			case 'C': printf("调用查找数据的函数!\n");  break;
+			case 'Q': printf("退出系统\n\n"); break;
+		}
+	}while(toupper(ch)!='Q');
+	
+	return 0; 
+}

@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int main()
+{
+	char str[]="Welcome to beijing",*p;
+	
+	p=(char *)malloc(sizeof(char)*strlen(str)+1);
+	
+	if(!p)
+	{
+		printf("分配动态内存失败！");
+		exit(1);
+	}
+	
+	strcpy(p,str);
+	strrev(p);//反转
+	printf("原字符串为:%s\n",str);
+	printf("反转之后的字符串为:%s\n",p);
+	return 0; 
+} 

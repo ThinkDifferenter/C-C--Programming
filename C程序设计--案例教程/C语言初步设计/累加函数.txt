@@ -1,0 +1,21 @@
+#include<stdio.h>
+int sum(int a,int b)
+{	
+	//ÀÛ¼Óº¯Êı
+	int i=0;
+
+	
+	while(a<=b)
+	{
+		i=i+a;
+		a++;
+	}
+	printf("the sum of (a,b) is %d\n",i);
+
+}
+main()
+{
+	sum(5,10);
+	
+	return 0;
+}

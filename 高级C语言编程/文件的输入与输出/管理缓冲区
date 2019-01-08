@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	char c1,c2;
+	
+	printf("请输入字符给变量c1:");
+	scanf("%c",&c1);
+	
+	fflush(stdin);
+	printf("请输入字符给变量c1:");
+	scanf("%c",&c2);
+	
+	printf("\nc1=%c,c2=%c\n",c1,c2);
+	
+	return 0;
+}

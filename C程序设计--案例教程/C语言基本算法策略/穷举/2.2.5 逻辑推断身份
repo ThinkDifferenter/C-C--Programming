@@ -1,0 +1,59 @@
+#include<stdio.h>
+void dispIdent(int Ident);
+void disp(int ore,int a,int b,int c);
+ int main()
+ {
+ 	int a,b,c,ore;
+ 	for(ore=1;ore<=3;ore++)
+ 	{
+	 	for(a=1;a<=3;a++)
+	 	{
+	 		for(b=1;b<=3;b++)
+	 		{
+		 		if(b==a)  continue;
+		 		c=(1+2+3)-a-b;
+				 if(a==1&&(ore!=1&&ore==2))
+				 {
+ 					if((b==2)&&(ore!=1||ore==3)&&(ore==3&&ore!=1))  disp(ore,a,b,c);
+ 					if((b==3)&&(ore==1&&ore!=3)&&(ore!=3||ore==1))  disp(ore,a,b,c);
+ 				} 
+				 if(a==2&&(ore!=1||ore==2))
+				 {
+ 					if((b==1)&&(ore!=1&&ore==3)&&(ore==3&&ore!=1))  disp(ore,a,b,c);
+ 					if((b==3)&&(ore==1&&ore!=3)&&(ore!=3&&ore==1))  disp(ore,a,b,c);
+ 				}
+			 	 if(a==1&&(ore!=1&&ore==2))
+				 {
+ 					if((b==1)&&(ore!=1||ore==3)&&(ore==3||ore!=1))  disp(ore,a,b,c);
+ 					if((b==3)&&(ore==1&&ore!=3)&&(ore!=3||ore==1))  disp(ore,a,b,c);
+ 				}  
+		 	}
+	 	}
+	 }
+ }
+ 
+ void dispIdent(int Ident)
+ {
+ 	switch(Ident)
+ 	{
+	 	case 1:printf("工程师。\n");break;
+	 	case 2:printf("技术员。\n");break;
+	 	case 3:printf("实习生。\n");break;
+	 }
+ } 
+ 
+ void disp(int ore,int a,int b,int c)
+ {
+ 	printf("这矿石是:");
+ 	
+ 	switch(ore)
+ 	{
+	 	case 1:printf("铁矿。\n");break;
+	 	case 2:printf("铜矿。\n");break;
+	 	case 3:printf("锡矿。\n");break;
+	 }
+	 
+	 printf("A是:");dispIdent(a); 
+	 printf("B是:");dispIdent(b);
+	 printf("C是:");dispIdent(c);
+ }

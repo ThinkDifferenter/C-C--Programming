@@ -1,0 +1,11 @@
+#include<stdio.h>
+//枚举-->排比数据！ 
+enum COLOR {RED=0,YELLOW,BLUE};
+main()
+{
+	printf("%d\n",RED);
+	printf("%d\n",YELLOW);
+	printf("%d\n",BLUE);
+	
+	return 0;
+}

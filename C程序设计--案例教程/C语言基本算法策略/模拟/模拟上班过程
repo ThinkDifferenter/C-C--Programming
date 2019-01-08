@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+int main()
+{
+	double minute=0;
+	double a,b,c;
+	
+	printf("我7:00从家出发,\n");
+	srand(time(00));
+	
+	a=(double)rand()*(30-25)/RAND_MAX+25;
+	printf("7:%.0f分到地铁\n",a);
+	//a=(double)rand()%5+25;
+	b=a+(double)rand()*5/RAND_MAX;
+	printf("7:%.0f分上车\n",b);
+	c=b+(double)rand()*(10-7)/RAND_MAX+7;
+	printf("7:%.0f分下车\n",c);
+	printf("7:%.0f分出地铁。\n",c+4);
+	return 0;
+} 

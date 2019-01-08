@@ -1,0 +1,47 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+ 
+int proDemand()
+{	srand(time(00));
+	double r;
+	r=(double)rand()/RAND_MAX;
+	if(r<0.25)   return 100;
+	else if(r>0.75)   return 300;
+	else return 200;
+}
+int calcuProfit(int demand,int stock)
+{
+	if(demand>=stock)   return 2*stock;
+	else                return 2*demand;
+}
+
+
+int main()
+{
+	int demand01,demand02,stock1,stock2,demand,i;
+	int sumProfit1=0,sumProfit2=0,n;
+	
+	printf("模拟月数:");
+	scanf("%d",&n);
+	
+	demand01=proDemand();
+	demand02=proDemand();
+	
+	for(i=1;i<=n;i++)
+	{
+		stock1=demand02;
+		stock2=(demand01+demand02+1)/2;
+		
+		demand=proDemand();
+		
+		sumProfit1+=calcuProfit(demand,stock1);
+		sumProfit2+=calcuProfit(demand,stock2);
+		
+		demand01=demand02;
+		demand02=demand;
+	}	
+	printf("方案1总盈利:%d万元。\n",sumProfit1);
+	printf("方案2总盈利:%d万元。\n",sumProfit2);
+	return 0;
+} 

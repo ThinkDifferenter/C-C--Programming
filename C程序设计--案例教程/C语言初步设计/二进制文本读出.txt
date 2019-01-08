@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+main()
+{
+	FILE *fp;
+	int i,j,k;
+	
+	if((fp=fopen("test.dat","rb"))==NULL)
+	{
+		printf("cannot open the file!\n");
+		exit(1);
+	}
+	
+	i=getw(fp);
+	j=getw(fp);
+	k=getw(fp);
+	
+	if(ferror(fp))
+	{
+		printf("%d\n",i);
+		printf("%d\n",j);
+		printf("%d\n",k);
+		
+	}
+	fclose(fp);
+	return 0;
+}

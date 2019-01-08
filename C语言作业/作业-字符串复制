@@ -1,0 +1,21 @@
+#include<stdio.h>
+char stringcpy(char str1[100], char str2[100]);
+int main()
+{
+	char str1[100],str2[100];
+	printf("ÇëÊäÈëÒ»´®×Ö·û:");
+	scanf("%s",str1);
+	stringcpy(str1,str2);
+	printf("×Ö·û´®ÒÔ¸´ÖÆ£¡\n");
+	return 0; 
+}
+char stringcpy(char str1[100],char str2[100])
+{
+	int i=0;
+	while(str1[i]!='\0')
+	{
+		str2[i]=str1[i];
+		i++;
+	}
+	return str2[100];
+}

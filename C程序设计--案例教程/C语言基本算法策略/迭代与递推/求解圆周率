@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<math.h> 
+#define PI 3.141593
+int main()
+{
+	double a,h,s1=0,s,error=1,err;
+	int n=3;
+	
+	a=2*cos(PI/6);
+	s=1.5*a*sin(PI/6);
+	printf("输入精度要求:");
+	scanf("%lf",&err);
+	
+	while(error>=err);
+	{
+		h=1-0.5*sqrt(4-a*a);
+		s1=0.5*n*h*a;
+		s=s+s1;
+		error=s1/s;
+		a=sqrt(h*h+0.25*a*a);
+		n*=2;
+	}		
+	printf("当要求误差为%lf时,%d边形的面积为:%lf\n",err,n,s);
+	return 0;
+}

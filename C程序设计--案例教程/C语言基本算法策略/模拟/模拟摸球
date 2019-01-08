@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+int main()
+{
+	int i,j,a,w=0,r=0,k;
+	srand((unsigned)time(NULL));
+	for(i=1;i<=500;i++)
+	{
+		k=0;
+		for(j=1;j<=3;j++)
+		{
+			a=rand()%6+1;
+			if(a<=4) k++; 
+		}
+		if(k==3)  w++;
+		if(k==0)  r++;
+	}
+	printf("全红球:%d次，几率%d%%\n",r,r/5);
+	printf("全白球:%d次，几率%d%%\n",w,w/5);
+} 

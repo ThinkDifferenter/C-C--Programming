@@ -1,0 +1,63 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+#define N 10
+
+void kuaisu (int *a,int n);
+void quick(int *a,int left,int right);
+main()
+{
+	int arr[N],i;
+	
+	srand(time(NULL));
+	
+	for(i=0;i<N;i++)
+	{
+		arr[i]=rand()/1000+100;
+	}	
+	printf("排序之前:\n");
+	for(i=0;i<N;i++)
+	{
+		printf("%d\t",arr[i]);
+	}
+	printf("\n");
+	printf("排序之后:\n");
+	
+	kuaisu(arr,N);
+	
+	for(i=0;i<N;i++)
+	{
+		printf("%d\t",arr[i]);
+	}
+	printf("\n");
+	return 0;
+}
+void kuaisu (int *a,int n)
+{
+	quick(a,0,n-1);
+}
+
+void quick(int *a,int left,int right)
+{
+	int f,l,r,t;
+	l=left;
+	r=right;
+	f=a[(left+right)/2];
+	
+	while(l<r)
+	{
+		while(a[l]<f)  l++;
+		while(a[r]>f)  --r;
+		if(l<=r)
+		{
+			t=a[l];
+			a[l]=a[r];
+			a[r]=t;
+			++l;
+			--r;
+		}
+	}
+	if(l==r)  l++;
+	if(left<r) quick(a,left,l-1);
+	if(l<right) quick(a,r+1,right);
+}

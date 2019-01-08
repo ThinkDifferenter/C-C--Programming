@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+main()
+{
+	char ch;
+	FILE *fp;
+	
+	if((fp=fopen("text.txt","rt"))==NULL)	
+//	if((fp=fopen("text.txt","wt"))==NULL)
+	{
+		printf("cannot open the file!\n");
+		exit(1);
+	}
+//	printf("«Î ‰»ÎŒƒ±æ:");
+//	while((ch=getchar())!='\n')
+	while((ch=fgetc(fp))!=EOF)
+	{
+		putch(ch);
+//		fputc(ch,fp);
+	}
+	printf("\n");
+	fclose(fp);
+	return 0;
+}

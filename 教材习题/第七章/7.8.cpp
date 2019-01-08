@@ -1,0 +1,55 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+int main()
+{
+	int i,j,k,cnt=0,flag,a[5][5],max,n;
+	srand((unsigned)time(NULL));
+	for(i=0;i<5;i++)
+	{
+		for(j=0;j<5;j++)
+		{
+			a[i][j]=rand()%100+1;
+		} 
+	}
+	printf("输出随机生成的二维数组:\n");
+	for(i=0;i<5;i++)
+	{
+		for(j=0;j<5;j++)
+		{
+			printf("%d\t",a[i][j]);
+		} 
+		printf("\n");
+	}
+	for(i=0;i<5;i++)
+	{
+		max=a[i][0];
+		k=0;
+		for(j=0;j<5;j++)
+		{
+			if(a[i][j]>max)
+			{
+				max=a[i][j];
+				k=j;
+			}
+		}
+		flag=1;
+		for(n=0;n<5;n++)
+		{
+			if(a[n][k]<a[i][k])
+			{
+				flag=0;
+			}
+		}
+		if(flag==1)
+		{
+			printf("第%d个马鞍点:a[%d][%d]=%d\n",cnt+1,i,k,a[i][k]);
+			cnt++;
+		}
+	}
+	if(cnt==0)
+	{
+		printf("没有马鞍点!\n"); 
+	}
+	return 0;
+} 

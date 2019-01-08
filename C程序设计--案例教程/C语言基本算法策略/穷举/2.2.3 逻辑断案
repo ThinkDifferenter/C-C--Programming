@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main()
+{
+	int a,b,c,d;
+	for(a=0;a<=1;a++)
+	for(b=0;b<=1;b++)
+	{
+		if(a==1||b==1)
+		{
+			for(c=0;c<=1;c++)
+			if(c==0||a==0)
+			{
+				if(c==1||b==1)
+				{
+					for(d=0;d<=1;d++)
+					{
+						if(c==1||d==1)
+						{
+							printf("a=%d,b=%d,c=%d,d=%d\n",a,b,c,d);
+						}
+					}
+				}
+			}
+		}
+	}
+	printf("\n");
+	return 0;
+}

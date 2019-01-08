@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+	int cnt=0,i,j;
+	int a[10];
+	for(i=0;i<10;i++)
+	{
+		a[i]=rand()%100;
+		j=0;
+		while(j>i)
+		{
+			if(a[j++]==a[i++])  break;
+		}
+		if(j<i)
+		{
+			i--;
+			continue;
+		}
+	}
+	for(i=0;i<10;i++)
+	{
+		printf("%d",a[i]);
+	}
+}

@@ -1,0 +1,44 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+main()
+{
+	//随机数组生成的套路！！！ 
+	int a[5][5],i,j;
+	srand((unsigned)time(NULL));
+	for(i=0;i<5;i++)
+	{
+		for(j=0;j<5;j++)
+		{
+			a[i][j]=rand()%91+10;
+		}
+	}
+	printf("输出生成的二维数组:\n");
+	for(i=0;i<5;i++)
+	{
+		for(j=0;j<5;j++)
+		{
+			printf("%5d",a[i][j]);
+		}
+		printf("\n");
+	}
+	printf("输出二维数组的左下三角:\n");
+	for(i=0;i<5;i++)
+	{
+		for(j=0;j<=i;j++)//注意列标的起始值！ 图形输出套路！ 
+		{
+			printf("%5d",a[i][j]);
+		}
+		printf("\n");
+	}
+	printf("输出二维数组的右下三角:\n");
+	for(i=0;i<5;i++)
+	{
+		for(j=4-i;j<5;j++)//注意列标的起始值！图形输出套路！ 
+		{
+			printf("%5d",a[i][j]);
+		}
+		printf("\n");
+	}
+	
+}

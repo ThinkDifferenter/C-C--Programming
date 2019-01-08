@@ -1,0 +1,9 @@
+#include<stdio.h>
+main()
+{
+	int a[10];
+	printf("%p\n",a);
+	printf("%p\n",&a[0]);
+	printf("%p\n",&a[1]);//sizeof(int)
+	return 0;
+}

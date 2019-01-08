@@ -1,0 +1,11 @@
+#include<stdio.h>
+#include<string.h>
+main()
+{
+	//比较两个字符串的大小！！！ 
+	char s1[]="abc";
+	char s2[]="Abc";
+	printf("%d\n",strcmp(s1,s2));
+	printf("%d\n",'a'-'A');
+	return 0;
+}

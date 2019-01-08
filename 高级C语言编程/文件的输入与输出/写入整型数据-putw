@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	FILE *fp;
+	int i1,i2,i3;
+	char *str="jiangjun";
+	
+	if((fp=fopen("text.dat","wb"))==NULL)
+	{
+		printf("cannot open the file!\n");
+		exit(1);
+	}
+	printf("请输入三个数:");
+	scanf("%d %d %d",&i1,&i2,&i3);
+	
+	putw(i1,fp);
+	putw(i2,fp);
+	putw(i3,fp);
+	
+	fclose(fp);
+	return 0;
+}

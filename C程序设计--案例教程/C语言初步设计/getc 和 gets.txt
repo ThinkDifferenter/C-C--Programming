@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+main()
+{
+	FILE *fp;
+	char string[80];
+	char ch;
+	
+	if((fp=fopen("text.txt","wt"))==NULL)
+	{
+		printf("cannot open the file!\n");
+		exit(1);
+	}
+	
+	printf("ÇëÊäÈë×Ö·û´®:");
+	while((ch=getchar())!='\n')
+	{
+		fputc(ch,fp);
+	}
+//	while(*string!=NULL)
+//	{
+//		gets(string);
+//		fputs(string,fp);
+//	}
+	fclose(fp);
+	return 0;
+}

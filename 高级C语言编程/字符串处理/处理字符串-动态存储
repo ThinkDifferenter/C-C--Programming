@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	char  *str;
+	int i;
+	
+	printf("设置字符串长度:");
+	scanf("%d",&i);
+	
+	str=(char *)malloc(sizeof(char *)*(i+1));
+	
+	if(str==NULL)
+	{
+		printf("分配内存出错!\n");
+		exit(1);
+	}
+	
+	printf("请输入字符串(长度不查超过%d):",i);
+	scanf("%s",str);
+	
+	printf("\n输入字符串为:%s\n",str);
+	return 0;	
+}

@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int main()
+{
+	char *str1="Welcome to beijing";
+	char *str2="begin",*str3="ad";
+	char *p;
+	
+	p=strpbrk(str1,str2);//²éÕÒ°üº­×Ö·û 
+	if(p)
+	{
+		printf("%s\n",p);
+	}
+	else
+	{
+		printf("Not found!\n");
+	}
+	p=strpbrk(str1,str3);
+	if(p)
+	{
+		printf("%s\n",p);
+	}
+	else
+	{
+		printf("Not found!\n");
+	}
+	return 0;
+}

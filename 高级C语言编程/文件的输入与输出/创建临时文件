@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	char *tmpfile,str[100];
+	FILE *fp;
+	
+	tmpfile=tmpnam(NULL);
+	if((fp=fopen(tmpfile,"w"))==NULL)
+	{
+		printf("创建临时文件失败！\n");
+		exit(1);
+	}
+	printf("临时文件名称:%d\n",tmpfile);
+	printf("请输入字符串:");
+	scanf("%s",str);
+	
+	fputs(str,fp);
+	fclose(fp);
+	return 0; 
+} 

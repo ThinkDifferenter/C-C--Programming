@@ -1,0 +1,44 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+#define N  5
+struct student 
+{
+	char no[9];
+	char name[10];
+	int chinese,math,english;
+}stu[N];
+main()
+{
+	FILE *fp;
+	int i;
+	
+	if((fp=fopen("result.tet","wt"))==NULL)
+	{
+		printf("cannot open the file!\n");
+		exit(1);
+	}	
+	
+	for(i=0;i<N;i++)
+	{
+		printf("\n学号:");
+		scanf("%s",stu[i].no);
+		
+		printf("姓名:");
+		scanf("%s",stu[i].name);
+		
+		printf("语文:");
+		scanf("%d",stu[i].chinese);
+		
+		printf("数学:");
+		scanf("%d",stu[i].math);
+		
+		printf("英语:");
+		scanf("%d",stu[i].english);
+		
+		fprintf(fp,"%s %s %d %d %d\n ",stu[i].no,stu[i].name,stu[i].chinese,stu[i].math,stu[i].english);
+		
+	}
+	fclose(fp);
+	return 0;
+}

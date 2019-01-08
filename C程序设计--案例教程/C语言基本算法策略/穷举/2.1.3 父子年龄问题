@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main()
+{
+	int x;
+	for(x=1;x+30<=60;x++)
+	{
+		if(30+x==2*(6+x))
+		{
+			printf("再过%d年父亲的年龄是儿子的两倍\n",x);
+		}
+	}
+	return 0;
+} 

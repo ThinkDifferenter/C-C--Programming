@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	FILE *fp;
+	char ch[10];
+	
+	if((fp=fopen("results.txt","rt"))=NULL)
+	{
+		printf("cannot open the file!\n");
+		exit(1); 
+	}
+	printf("打开文件时，位置指针的值为:%ld\n",ftell(fp));
+	
+	fgetc(fp);
+	printf("读取一个字符后，文件的指针为L%ld\n",ftell(fp));
+	
+	fgets(ch,10,fp);
+	printf("继续读取十个字符后，文件指针的位置为:%ld\n",ftell(fp));
+	
+	return 0;
+}

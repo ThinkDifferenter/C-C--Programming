@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	FILE *fp;
+	int i1,i2,i3;
+	
+	if((fp=fopen("text.dat","rb"))==NULL)
+	{
+		printf("cannot open the file!\n");
+		exit(1);
+	}
+	
+	i1=getw(fp);
+	i2=getw(fp);
+	i3=getw(fp);
+	if(ferror(fp))
+	{
+		printf("打开文件出错!\n");
+		exit(1);
+	}
+	printf("i1=%d\n",i1);
+	printf("i2=%d\n",i2);
+	printf("i3=%d\n",i3);
+	
+	
+	fclose(fp);
+	return 0;
+}

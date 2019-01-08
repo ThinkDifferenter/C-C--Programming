@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+#include<time.h>
+int main()
+{
+	int i,n=0,m=1000;
+	double x,y;
+	
+	printf("要产生一个随机点数:");
+	scanf("%d",&m);
+	
+	srand(time(00));
+	
+	for(i=1;i<=m;i++)
+	{
+		y=(double)rand()/RAND_MAX;
+		x=(double)rand()/RAND_MAX;
+		if(y<=exp(-x)&&y>=0)
+		{
+			n++;
+		}
+	}
+	printf("面积为%lf\n",(double)n/m);
+	return 0;
+} 

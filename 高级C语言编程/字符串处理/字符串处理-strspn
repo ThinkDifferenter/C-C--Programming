@@ -1,0 +1,13 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int main()
+{
+	char *str1="One world";
+	char *str2="One dream";
+	int l;
+	
+	l=strspn(str1,str2);//查找相同字符 
+	printf("字符串str1与str2中前%d个字符相同。\n",l);
+	return 0; 
+}

@@ -1,0 +1,60 @@
+#include<stdio.h>
+int IsArmstrong(int number);
+int getNumberal(int number,int n);
+int getDigitNum(int number);
+int main()
+{
+	int n;
+	printf("10~10000间的Armstrong数有:\n");
+	for(n=10;n<=10000;n++)
+	{
+		if(IsArmstrong(n))
+		{
+			printf("%d\t",n);
+		}
+	}
+	printf("\n");
+	return 0;
+} 
+int getNumberal(int number,int n)
+{
+	int i,power=1;
+	for(i=1;i<=n;i++)
+	{
+		power*=10;
+	}
+	return (number%power)/(power/10);
+}
+int getDigitNum(int number)
+{
+	int n;
+	for(n=0;number>0;n++)
+	{
+		number/=10;
+	}
+	return n;
+}
+int IsArmstrong(int number)
+{
+	int n,i,j;
+	int sum=0,power=1;
+	
+	n=getDigitNum(number);
+	for(i=1;i<=n;i++)
+	{
+		power=1;
+		for(j=1;j<=n;j++)
+		{
+			power*=getNumberal(number,i);
+		}
+		sum+=power;
+	}
+	if(number==sum)
+	{
+		return 1;
+	}
+	else
+	{
+		return 0;
+	}
+}

@@ -1,0 +1,13 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+main()
+{
+	int i;srand((unsigned)time(NULL));
+	i=rand()%90+10;//随机产生【10,99】之间的数！！ 
+	
+	printf("%d\n",i);
+	
+	return 0;	
+}

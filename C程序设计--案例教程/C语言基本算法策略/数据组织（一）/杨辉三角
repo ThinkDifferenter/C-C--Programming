@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main()
+{
+	int i,j,k=2,n=3,a[60]={0,1,1,1};
+	while(n<55)
+	{
+		a[n+1]=1;//第k层的的一个元素 
+		for(j=2;j<=k;j++)
+		{
+			a[n+j]=a[n-k+j-1]+a[n-k+j];
+			a[n+k+1]=1;//第k层的最后一个元素
+			k++;  //进入下一层
+			n+=k; 
+		}
+	}
+	for(i=1,j=1,k=1;i<=55;i++)
+	{
+		printf("%d,",a[i]);
+		if(j++>=k)
+		{
+			printf("\n");
+			j=1;
+			k++;
+		}
+	}
+	return 0;
+} 

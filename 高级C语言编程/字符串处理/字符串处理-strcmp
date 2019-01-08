@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int mian()
+{
+	char *str1="One";
+	char *str2="one";
+	int i,j;
+	
+	i=strcmp(str1,str2);
+	j=stricmp(str1,str2);
+	printf("区分大小写字符串比较:");
+	if(i>0)
+	{
+		printf("%s>%s\n",str1,str2);
+	}
+	else if(i<0)
+	{
+		printf("%s<%s\n",str1,str2);
+	}
+	else
+	{
+		printf("%s=%s\n",str1,str2);
+	}
+	
+	printf("不区分大小写字符串比较:");
+	if(j>0)
+	{
+		printf("%s>%s\n",str1,str2);
+	}
+	else if(j<0)
+	{
+		printf("%s<%s\n",str1,str2);
+	}
+	else
+	{
+		printf("%s=%s\n",str1,str2);
+	}
+	return 0;
+}

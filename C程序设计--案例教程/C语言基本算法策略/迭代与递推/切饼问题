@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+	int n,m,pieceNum=2;
+	
+	printf("请输入刀数:");
+	scanf("%d",&m);
+	for(n=2;n<=m;n++)
+	{
+		pieceNum+=n;
+	} 
+	printf("最多可以切成%d块\n",pieceNum);
+	return 0;
+}

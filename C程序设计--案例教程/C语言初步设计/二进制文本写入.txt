@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+main()
+{
+	FILE *fp;
+	int i,j,k;
+	char *str="jiangjun";
+	
+	if((fp=fopen("test.dat","wb"))==NULL)
+	{
+		printf("cannot open the file!\n");
+		exit(1);
+	}
+	
+	printf("请输入三个整数:");
+	scanf("%d %d %d",&i,&j,&k);
+	
+	putw(i,fp);
+	putw(j,fp);
+	putw(k,fp);
+	
+	fclose(fp);
+	
+	return 0;
+}

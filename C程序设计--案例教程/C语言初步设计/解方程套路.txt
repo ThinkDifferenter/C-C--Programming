@@ -1,0 +1,17 @@
+#include<stdio.h>
+main()
+{
+	//解方程套路！！ 
+	int i,j,;
+	
+	for(i=0;i<10000;i++)
+	for(j=0;j<10000;j++)
+
+	
+	if(10000==i+j)
+	{
+		printf("i=%d\nj=%d\n",i,j);
+		printf("\n");
+	}
+	return 0;	
+}

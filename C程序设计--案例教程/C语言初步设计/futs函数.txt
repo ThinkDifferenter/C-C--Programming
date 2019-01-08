@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+main()
+{
+	char string[80];
+	FILE *fp;
+	
+	if((fp=("text4.txt","at"))==NULL)
+	{
+		printf("cannot open the file !\n");
+		exit(1);
+	} 
+	
+	printf("qing shu ru azi fu chuan(hui che jie shu):");
+	
+	while(*string!=NULL)
+	{
+		gets(string);
+		fputs(string,fp);
+		fputc('\n',fp);
+	}
+	
+	fclose(fp);
+	return 0;
+	
+}

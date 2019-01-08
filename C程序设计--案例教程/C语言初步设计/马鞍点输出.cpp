@@ -1,0 +1,59 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+main()
+{
+	int a[5][5],i,j,k,max;
+	int flag,n,m=0;
+	srand((unsigned)time(NULL));
+	for(i=0;i<5;i++)
+	{
+		for(j=0;j<5;j++)
+		{
+			a[i][j]=rand()%91+10;
+		}
+	}
+	printf("输出生成的二维数组:\n");
+	for(i=0;i<5;i++)
+	{
+		for(j=0;j<5;j++)
+		{
+			printf("%5d",a[i][j]);
+		}
+		printf("\n");
+	}
+	for(i=0;i<5;i++)
+	{
+		max=a[i][0];
+		k=0;
+		for(j=0;j<5;j++)
+		{
+			if(a[i][j]>max)
+			{
+				max=a[i][j];
+				k=j;
+			}
+		}
+		flag=1;
+		for(n=0;n<5;n++)
+		{
+			if(a[n][k]<a[i][k])
+			{
+				flag=0;
+			}
+		}
+		if(flag==1)
+		
+		{
+			printf("马鞍点:a[%d][%d]=%d\n",i,k,a[i][k]);
+			m++;
+		}
+	}	
+	if(m==0)
+	{
+		printf("不存在马鞍点！\n");
+	}
+} 
+//马鞍点是指某个元素在行中最大，在列中最小。
+//随机产生的二维数组要多次运行才可能产生马鞍点！ 
